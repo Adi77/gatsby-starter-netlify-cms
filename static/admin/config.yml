@@ -69,3 +69,41 @@ collections:
         name: "tpv-products"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tpv-products-page"}
+          - {label: Slogan, name: slogan, widget: string}
+          - {label: Slogan Untertitel, name: slogan-sub, widget: string}
+          - {label: Abgebende Eltern, name: abgebende-eltern, widget: object, 
+              fields: [
+                {label: Überschrift, name: heading, widget: string}, 
+                {label: Untertitel, name: subtitle, widget: string}, 
+                {label: Spalte links, name: abgebende-eltern-left-columns, widget: list, 
+                fields: [
+                  {label: Überschrift, name: headline, widget: string}, 
+                  {label: Inhalt, name: contents, widget: markdown}
+                  ]
+                },
+                {label: Spalte rechts, name: abgebende-eltern-right-columns, widget: list, 
+                fields: [
+                  {label: Überschrift, name: headline, widget: string}, 
+                  {label: Inhalt, name: contents, widget: markdown}
+                  ]
+                }
+              ]
+            }
+          - {label: Tagesfamilien, name: tagesfamilien, widget: object, 
+              fields: [
+                {label: Überschrift, name: heading, widget: string}, 
+                {label: Untertitel, name: subtitle, widget: string}, 
+                {label: Spalte links, name: tagesfamilien-left-columns, widget: list, 
+                fields: [
+                  {label: Überschrift, name: headline, widget: string}, 
+                  {label: Inhalt, name: contents, widget: markdown}
+                  ]
+                },
+                {label: Spalte rechts, name: tagesfamilien-right-columns, widget: list, 
+                fields: [
+                  {label: Überschrift, name: headline, widget: string}, 
+                  {label: Inhalt, name: contents, widget: markdown}
+                  ]
+                }
+              ]
+            }
